@@ -1,0 +1,12 @@
+<div>新規作成</div>
+<div>
+  <%= form_for(@blog, url: {controller: 'blog', action: 'create' }) do |f| %>
+    タイトルを入力してください<br>
+    <%= f.text_field :title %><br>
+    テキストを入力してください<br>
+    <%= f.text_area :text %>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

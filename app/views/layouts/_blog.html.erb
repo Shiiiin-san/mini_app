@@ -1,0 +1,14 @@
+<% @blog.each do |blog|%>
+  <div class = 'one_area'>
+    <div><%= blog.title %></div>
+    <div><%= blog.text %></div>
+  
+  
+    <% if blog.user_id == current_user.id %>
+    <div class = "edit_paper">
+      <%= link_to '編集', "/blog/#{blog.id}/edit", method: :GET %>
+    </div>
+    <% end %>
+  
+  </div>
+<% end %>

@@ -1,0 +1,119 @@
+// Place all the styles related to the blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  background-image: image-url("paper.png");
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+ul {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.header_left{
+  text-decoration:none;
+  color: white;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  list-style: none;
+  text-align: center;
+  width: 12%;
+}
+
+.header_left a{
+  text-decoration:none;
+  color: white;
+}
+
+.header_right{
+  text-decoration:none;
+  color: white;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  list-style: none;
+  text-align: center;
+  width: 12%;
+  padding: 5px;
+}
+
+.header_right a{
+  text-decoration:none;
+  color: white;
+}
+
+.main_area{
+  padding-top: 60px;
+  width: 100%;
+  margin: 0 ;
+}
+
+.areas{
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 0;
+}
+
+.one_area{
+  border-radius: 10px;
+  background-color: white;
+  border: solid gray;
+  height: 300px;
+  width: 480px;
+  margin: 5px auto;
+  padding: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+.edit_paper{
+  color: white;
+  background-color: rgb(238, 235, 235);
+  border: solid gray;
+  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+  position: absolute;
+  top: 20px;
+  right: -126px;
+  margin: auto;
+  z-index: 0;
+  display: block;
+}
+
+.edit_paper a{
+  text-decoration:none;
+  color: blue;
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer {
+  background-color: black;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+}

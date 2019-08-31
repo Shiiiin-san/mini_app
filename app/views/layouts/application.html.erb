@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MiniApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+      <ul>
+        <li class = "header_left"><%= link_to 'タイトル', '/blog', method: :GET %></li>
+        <% if user_signed_in? %>
+          <li class = "header_right"><%= link_to 'ログアウト', destroy_user_session_path, method: :DELETE%></li>
+          <li class = "header_right"><%= link_to '投稿する', '/blog/new', method: :GET %></li>
+          <li class = "header_right"><%= link_to 'ようこそ', '', method: :GET %></li>
+        <% else %>
+          <li class = "header_right"><%= link_to 'ログイン', user_session_path, method: :POST %></li>
+          <li class = "header_right"><%= link_to '投稿する', '/users/sign_in', method: :GET%></li>
+        <% end %>
+      </ul>
+    </header>
+    <div class = 'main_area'>
+
+      <%= yield %>
+
+    </div>
+
+    <footer>フッダー</footer>
+  </body>
+</html>
